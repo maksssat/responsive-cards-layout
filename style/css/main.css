@@ -16,20 +16,56 @@ body {
 }
 
 html {
-  background-color: #e6e6e6;
+  background-color: #dadada;
   font-family: "Lato", sans-serif;
 }
 
 .container {
-  padding: 20px;
+  padding: 10px;
 }
 
-.wrapper {
+.grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 30px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.flex .card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+}
+
+.flex .filling-empty-space-childs {
+  width: 300px;
+  /*the width of the images in this example*/
+  height: 0;
+  /*Important! for the divs to collapse should they fall in a new row*/
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 900;
+  padding: 0 40px;
 }
 
 .card {
@@ -56,7 +92,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e4e4e4;
+  background-color: #f0f0f0;
   border-radius: 5px 5px 0 0;
 }
 
